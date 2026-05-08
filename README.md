@@ -1,8 +1,8 @@
-# KinetiX Insurance Limit Optimization — Capstone Project
+# Health Insurance Limit Optimization — ESADE MiBA Capstone
 
-**ESADE MiBA Capstone | KinetiX Tech**
+**ESADE MiBA Capstone | In collaboration with KinetiX**
 
-This project develops a data-driven optimization engine for KinetiX's health insurance reimbursement limits. Using Mixed Integer Quadratic Programming (MIQP), it redistributes coverage limits across 11 medical services in a way that is budget-neutral, reduces financial variance (actuarial risk), and maximizes expected reimbursement fairness across the portfolio.
+This project develops a data-driven optimization engine for health insurance reimbursement limits. Using Mixed Integer Quadratic Programming (MIQP), it redistributes coverage limits across 11 medical services in a way that is budget-neutral, reduces financial variance (actuarial risk), and maximizes expected reimbursement fairness across the portfolio.
 
 ---
 
@@ -22,12 +22,12 @@ This project develops a data-driven optimization engine for KinetiX's health ins
 
 ## Business Context
 
-KinetiX provides health insurance plans covering a portfolio of medical services — from low-frequency, high-cost procedures (e.g., major surgery) to high-frequency, lower-cost services (e.g., outpatient consultations). Each service has a **reimbursement limit**: the maximum amount KinetiX pays out per claim.
+A health insurer covers a portfolio of medical services — from low-frequency, high-cost procedures (e.g., major surgery) to high-frequency, lower-cost services (e.g., outpatient consultations). Each service has a **reimbursement limit**: the maximum amount paid out per claim.
 
-**The business problem**: Are the current limits set optimally? Could KinetiX reduce its total expected payout or variance *without* changing its total limit budget — simply by redistributing limits across services?
+**The business problem**: Are the current limits set optimally? Could an insurer reduce its total expected payout or variance *without* changing its total limit budget — simply by redistributing limits across services?
 
 **Why this matters**:
-- **For KinetiX (insurer)**: Lower variance means more predictable cash flow, reduced reserve requirements, and better actuarial stability.
+- **For the insurer**: Lower variance means more predictable cash flow, reduced reserve requirements, and better actuarial stability.
 - **For policyholders**: Fair limits mean high-claim services are not capped too aggressively, and low-claim services are not over-funded at the expense of others.
 - **Regulatory**: Budget neutrality ensures no net change in total liability — making the adjustment defensible to regulators and actuaries.
 
