@@ -94,11 +94,6 @@ Capstone/
 ├── optimized_limits2.xlsx      # Final optimization output (Excel, with chart)
 ├── limits_comparison_plot.png  # Bar chart: original vs. adjusted limits per service
 │
-├── Capstone_Proposal_Kinetix1.pdf          # Initial project proposal
-├── KinetiX-ESADE-MiBA-Capstone-Mid-Term-Report.pdf  # Mid-term academic report
-├── Hovo-compressed.pdf                     # Reference document
-├── Syllabus The Capstone Project.pdf       # Course syllabus
-└── Mid-term-assessment.mov                 # Mid-term video assessment recording
 ```
 
 ---
