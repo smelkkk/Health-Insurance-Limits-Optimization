@@ -1,0 +1,13 @@
+# Academic documents and large media (stored locally in docs/)
+docs/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
