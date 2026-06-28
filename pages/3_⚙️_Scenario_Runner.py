@@ -84,7 +84,7 @@ with col_desc:
         "<strong>Low λ</strong> (≤ 1e-5) → Cost minimisation. Reduce expected payout; accept more variance.<br>"
         "<strong>Medium λ</strong> (~1e-2) → Balanced. Reduce both cost and variance.<br>"
         "<strong>High λ</strong> (≥ 0.1) → Stability. Minimise variance; accept slightly higher cost.<br><br>"
-        "Higher λ means the model is more risk-averse — it prefers stable, predictable payouts "
+        "Higher λ means the model is more risk-averse - it prefers stable, predictable payouts "
         "even if the average is slightly higher."
     )
 
@@ -104,7 +104,7 @@ else:
     scenario_data = None
     df_scenario = fallback_balanced_dataframe()
 
-# Apply max_adj_pct clamp for display (informational — actual solver respects adaptive ε)
+# Apply max_adj_pct clamp for display (informational - actual solver respects adaptive ε)
 if max_adj_pct != 5:
     factor = max_adj_pct / 5.0
     df_scenario = df_scenario.copy()

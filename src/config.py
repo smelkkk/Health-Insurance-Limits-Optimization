@@ -44,7 +44,7 @@ NAMED_SCENARIOS = {
 
 CURRENCY = "AMD"
 
-# Colour palette — KinetiX dark theme
+# Colour palette - KinetiX dark theme
 C_PRIMARY   = "rgb(64,242,154)"       # KinetiX green accent
 C_SECONDARY = "rgb(149,245,71)"       # secondary green
 C_DARK      = "rgb(13,13,13)"         # card surfaces

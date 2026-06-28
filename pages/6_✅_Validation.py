@@ -18,7 +18,7 @@ st.caption("Evidence that optimised limits outperform original limits under simu
 st.divider()
 
 st.info(
-    "**Interpretation note:** The following validation uses Monte Carlo simulation — "
+    "**Interpretation note:** The following validation uses Monte Carlo simulation - "
     "randomly drawing claim samples from the empirical distributions. "
     "This provides *evidence in favour of* the optimised limits, not a guarantee. "
     "Results depend on the quality and representativeness of historical claim data."
@@ -124,7 +124,7 @@ info_block("Simulation methodology",
     f"4. After {result['n_simulations']} runs, the distribution of differences is analysed.<br><br>"
     "<strong>What this tells us:</strong><br>"
     "A distribution centred below zero provides evidence that the optimised limits "
-    "reduce total reimbursement across a range of claim scenarios — not just the observed "
+    "reduce total reimbursement across a range of claim scenarios - not just the observed "
     "historical data.<br><br>"
     "<strong>Limitations:</strong><br>"
     "• Simulation assumes claim amounts are drawn independently per service.<br>"

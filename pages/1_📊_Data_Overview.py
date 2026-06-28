@@ -72,7 +72,7 @@ if not high_conc.empty:
     for _, r in high_conc.iterrows():
         st.info(
             f"📌  **{r['service_name']}** accounts for **{r['reimbursement_share']:.1f}%** "
-            "of total reimbursements — a dominant cost driver in the portfolio."
+            "of total reimbursements - a dominant cost driver in the portfolio."
         )
 
 st.divider()
@@ -96,7 +96,7 @@ info_block("How to read the Pareto chart",
     "The <strong>Pareto chart</strong> ranks services by their share of total reimbursements. "
     "The line shows the <strong>cumulative</strong> share.<br><br>"
     "In most insurance portfolios, a small number of service groups drive the majority of cost. "
-    "In this portfolio, <strong>General Ambulatory Care</strong> alone accounts for the largest single share — "
+    "In this portfolio, <strong>General Ambulatory Care</strong> alone accounts for the largest single share - "
     "making it the most important service to calibrate correctly.<br><br>"
     "This view helps pricing teams focus attention on cost drivers rather than treating all services equally."
 )

@@ -266,7 +266,7 @@ def render_sidebar_footer():
 # ── Metadata bar ──────────────────────────────────────────────────────────────
 
 def info_block(title: str, content: str):
-    """A styled always-visible info section — replaces st.expander."""
+    """A styled always-visible info section - replaces st.expander."""
     st.markdown(f"""
         <div style="
           background: rgb(13,13,13);

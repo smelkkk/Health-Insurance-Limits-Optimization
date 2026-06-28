@@ -92,15 +92,15 @@ data-driven decisions about reimbursement limits across medical service groups.
 
 **Key capabilities:**
 
-- **Data Overview** — understand claim volumes and cost concentration across services
-- **Limit Diagnostics** — identify where current limits are over-funded, binding, or misaligned
-- **Scenario Runner** — explore how different risk-aversion levels change the optimised limits
-- **Before vs After** — compare original and optimised limits with plain-language explanations
-- **Risk / Cost Tradeoff** — understand the λ "risk dial" and the efficient frontier
-- **Monte Carlo Validation** — evidence that results hold under simulated claim uncertainty
-- **Service Drilldown** — deep-dive into any single service
-- **Recommendations** — prioritised, plain-language action items for each service
-- **Export** — download results in CSV, Excel, or text summary format
+- **Data Overview** - understand claim volumes and cost concentration across services
+- **Limit Diagnostics** - identify where current limits are over-funded, binding, or misaligned
+- **Scenario Runner** - explore how different risk-aversion levels change the optimised limits
+- **Before vs After** - compare original and optimised limits with plain-language explanations
+- **Risk / Cost Tradeoff** - understand the λ "risk dial" and the efficient frontier
+- **Monte Carlo Validation** - evidence that results hold under simulated claim uncertainty
+- **Service Drilldown** - deep-dive into any single service
+- **Recommendations** - prioritised, plain-language action items for each service
+- **Export** - download results in CSV, Excel, or text summary format
         """
     )
 

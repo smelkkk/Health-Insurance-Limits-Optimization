@@ -13,7 +13,7 @@ _css = _ASSETS / "style.css"
 if _css.exists():
     st.markdown(f"<style>{_css.read_text()}</style>", unsafe_allow_html=True)
 st.title("⚖️ Risk / Cost Tradeoff")
-st.caption("Understand the λ risk dial — how risk-aversion shapes the optimised limits.")
+st.caption("Understand the λ risk dial - how risk-aversion shapes the optimised limits.")
 st.divider()
 
 scenarios  = load_precomputed_scenarios()
@@ -37,7 +37,7 @@ Think of **λ (lambda)** as a dial that controls what the model prioritises:
 | **Very high** (≥ 1) | Pure variance minimisation | Model barely moves limits; maximises stability |
 
 **For most insurers:** A balanced λ ≈ 0.01 is a reasonable starting point. It achieves
-meaningful cost improvement while keeping reimbursement patterns stable — which matters
+meaningful cost improvement while keeping reimbursement patterns stable - which matters
 for reserve planning and regulatory reporting.
         """
     )
@@ -82,7 +82,7 @@ if sweep_df is not None:
         "Each point represents one λ value.<br><br>"
         "<strong>Moving left</strong> on the x-axis (lower variance) = more stability-focused.<br>"
         "<strong>Moving down</strong> on the y-axis (lower expected payout) = lower average cost.<br><br>"
-        "The ideal point is the <strong>bottom-left</strong> — but there is always a trade-off. "
+        "The ideal point is the <strong>bottom-left</strong> - but there is always a trade-off. "
         "The selected λ is shown as a star ⭐."
     )
 else:

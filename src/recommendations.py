@@ -30,7 +30,7 @@ def generate_recommendations(summary: pd.DataFrame) -> pd.DataFrame:
             rows.append({
                 "service_name": name,
                 "category":     "Needs More Data",
-                "headline":     f"Only {n} historical claims — results unreliable.",
+                "headline":     f"Only {n} historical claims - results unreliable.",
                 "detail":       (
                     f"With fewer than {_THRESHOLDS['low_data']} claims, the distribution estimate "
                     "is statistically weak. Collect more data before acting on model output for this service."

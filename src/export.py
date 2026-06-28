@@ -23,7 +23,7 @@ def generate_text_summary(kpis: dict, summary: pd.DataFrame) -> str:
     today = date.today().isoformat()
     lines = [
         "=" * 60,
-        "HEALTH INSURANCE LIMIT OPTIMISATION — EXECUTIVE SUMMARY",
+        "HEALTH INSURANCE LIMIT OPTIMISATION - EXECUTIVE SUMMARY",
         f"Generated: {today}",
         "=" * 60,
         "",
@@ -65,7 +65,7 @@ def generate_text_summary(kpis: dict, summary: pd.DataFrame) -> str:
         "-" * 60,
         "METHODOLOGY NOTE",
         "-" * 60,
-        "Model: Mixed Integer Quadratic Programme (MIQP) — Gurobi 13",
+        "Model: Mixed Integer Quadratic Programme (MIQP) - Gurobi 13",
         f"Objective: minimise Σ wᵢ [E[rᵢ(Tᵢ)] + λ · Var[rᵢ(Tᵢ)]]",
         f"Constraint: Σ δᵢ = 0 (budget-neutral)",
         f"Adaptive ε: εᵢ = min({0.05}, 0.4 / √nᵢ)",

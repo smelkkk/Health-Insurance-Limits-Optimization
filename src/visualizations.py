@@ -1,4 +1,4 @@
-"""All Plotly chart functions — KinetiX dark theme."""
+"""All Plotly chart functions - KinetiX dark theme."""
 
 import numpy as np
 import pandas as pd
@@ -72,7 +72,7 @@ def pareto_chart(pareto: pd.DataFrame) -> go.Figure:
         line=dict(color=C_SECONDARY, width=2),
         marker=dict(color=C_SECONDARY, size=6),
     ))
-    return _dark(fig, title="Cost Concentration — Pareto View",
+    return _dark(fig, title="Cost Concentration - Pareto View",
                  yaxis=dict(title="Share of Total Reimbursement (%)",
                             gridcolor="rgba(84,84,84,0.3)",
                             tickfont=dict(color=C_NEUTRAL),
@@ -127,7 +127,7 @@ def claim_distribution_vs_limit(df: pd.DataFrame, limit: int, service_name: str)
                   annotation_text=f"Limit ({_fmt(limit)} {CURRENCY})",
                   annotation_position="top right",
                   annotation_font_color=C_NEGATIVE)
-    return _dark(fig, title=f"Claim Distribution — {service_name}",
+    return _dark(fig, title=f"Claim Distribution - {service_name}",
                  xaxis_title=f"Claimed Amount ({CURRENCY})",
                  yaxis_title="Number of Claims", height=350)
 
@@ -161,7 +161,7 @@ def delta_waterfall(df: pd.DataFrame) -> go.Figure:
         textfont=dict(color=C_LIGHT),
     ))
     fig.add_hline(y=0, line_color="rgba(84,84,84,0.5)")
-    return _dark(fig, title="Budget Redistribution — Limit Adjustments (Δ AMD)",
+    return _dark(fig, title="Budget Redistribution - Limit Adjustments (Δ AMD)",
                  xaxis_tickangle=-30, yaxis_title=f"Adjustment ({CURRENCY})",
                  height=400)
 
@@ -305,6 +305,6 @@ def service_reimbursement_curve(
     fig.add_vline(x=optimized_limit, line_dash="dot", line_color=C_OPTIMIZED,
                   annotation_text=f"Optimised ({_fmt(optimized_limit)})",
                   annotation_font_color=C_OPTIMIZED)
-    return _dark(fig, title=f"Expected Reimbursement Curve — {service_name}",
+    return _dark(fig, title=f"Expected Reimbursement Curve - {service_name}",
                  xaxis_title=f"Limit T ({CURRENCY})",
                  yaxis_title=f"Expected Reimbursement ({CURRENCY})", height=350)

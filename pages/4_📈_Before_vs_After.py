@@ -14,7 +14,7 @@ _css = _ASSETS / "style.css"
 if _css.exists():
     st.markdown(f"<style>{_css.read_text()}</style>", unsafe_allow_html=True)
 st.title("📈 Before vs After Comparison")
-st.caption("Compare original and optimised limits — with plain-language explanations.")
+st.caption("Compare original and optimised limits - with plain-language explanations.")
 st.divider()
 
 claims     = load_service_claims()
@@ -135,7 +135,7 @@ where claims fall relative to the current limit.
 
     st.divider()
     st.info(
-        "**Bottom line:** The optimiser acts like a portfolio manager — it reallocates "
+        "**Bottom line:** The optimiser acts like a portfolio manager - it reallocates "
         "budget from over-funded, low-utilisation services toward those where the limit "
         "is a genuine constraint. The total limit pool is unchanged."
     )

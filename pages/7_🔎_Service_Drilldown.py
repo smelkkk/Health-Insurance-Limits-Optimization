@@ -23,7 +23,7 @@ opt_inputs = load_optimization_inputs()
 summary    = build_service_summary(claims, opt_inputs)
 
 # ── service selector ───────────────────────────────────────────────────────────
-service_options = {i: f"Service {i} — {SERVICE_NAMES[i]}" for i in sorted(claims.keys())}
+service_options = {i: f"Service {i} - {SERVICE_NAMES[i]}" for i in sorted(claims.keys())}
 selected_id = st.selectbox(
     "Select a service",
     options=list(service_options.keys()),
@@ -47,21 +47,21 @@ c2.metric("Optimised",    f"{opt/1e3:,.0f}K",
           delta=f"{opt-orig:+,.0f}", delta_color="normal")
 c3.metric("Claims",       f"{int(s['n_claims'])}")
 c4.metric("Binding",      f"{s['binding_rate']:.0f}%")
-c5.metric("Mean Claim",   f"{s['mean_claim']:,.0f}")
-c6.metric("Max Claim",    f"{s['max_claim']:,.0f}")
+c5.metric("Mean",   f"{s['mean_claim']/1e3:,.0f}K")
+c6.metric("Max",    f"{s['max_claim']/1e3:,.0f}K")
 
 # ── diagnostic badge ───────────────────────────────────────────────────────────
 binding = s["binding_rate"]
 if s["n_claims"] < 5:
-    st.warning("⚠️ Insufficient data — fewer than 5 claims. Treat results with caution.")
+    st.warning("⚠️ Insufficient data - fewer than 5 claims. Treat results with caution.")
 elif binding > 70:
-    st.error(f"🔴 **Highly Binding** — {binding:.0f}% of claims hit the current limit.")
+    st.error(f"🔴 **Highly Binding** - {binding:.0f}% of claims hit the current limit.")
 elif binding > 40:
-    st.warning(f"🟡 **Moderately Binding** — {binding:.0f}% of claims hit the current limit.")
+    st.warning(f"🟡 **Moderately Binding** - {binding:.0f}% of claims hit the current limit.")
 elif s["mean_claim"] < 0.3 * orig:
-    st.info(f"⚪ **Underused Limit** — mean claim is only {s['mean_claim']/orig*100:.0f}% of the limit.")
+    st.info(f"⚪ **Underused Limit** - mean claim is only {s['mean_claim']/orig*100:.0f}% of the limit.")
 else:
-    st.success("🟢 **Well Calibrated** — binding rate and claim distribution look appropriate.")
+    st.success("🟢 **Well Calibrated** - binding rate and claim distribution look appropriate.")
 
 st.divider()
 

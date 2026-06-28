@@ -116,7 +116,7 @@ selected = st.multiselect(
     "Choose services",
     options=list(claims.keys()),
     default=list(claims.keys())[:3],
-    format_func=lambda i: f"Service {i} — {claims[i]['service_name'].iloc[0]}",
+    format_func=lambda i: f"Service {i} - {claims[i]['service_name'].iloc[0]}",
 )
 
 for idx in selected:

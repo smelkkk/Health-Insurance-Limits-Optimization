@@ -86,7 +86,7 @@ def build_service_summary(
         opt_lim = OPTIMIZED_LIMITS[idx]
         n       = len(df)
 
-        # Use min(ClaimedAmount, limit) for both — matches comparison.ipynb methodology
+        # Use min(ClaimedAmount, limit) for both - matches comparison.ipynb methodology
         reimb_orig = np.minimum(c.values, limit).sum()
         reimb_opt  = np.minimum(c.values, opt_lim).sum()
 
