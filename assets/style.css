@@ -4,13 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Ensure Material Symbols font is never overridden */
+/* ── Sidebar toggle — protect Material Symbols font ────────── */
+/* These rules MUST have higher specificity than the Inter overrides below.
+   Streamlit renders icon text (e.g. "keyboard_double_arrow_right") inside
+   <span class="material-symbols-rounded"> — if Inter overrides the font,
+   the glyph lookup fails and the raw text is shown instead. */
 .material-symbols-rounded,
-[class*="material-symbols"] {
+[class*="material-symbols"],
+[data-testid="stSidebarCollapseButton"] *,
+[data-testid="collapsedControl"] *,
+[data-testid="stSidebarCollapseButton"] button span,
+[data-testid="collapsedControl"] button span {
     font-family: 'Material Symbols Rounded' !important;
+    -webkit-font-feature-settings: 'liga' !important;
+    font-feature-settings: 'liga' !important;
 }
-
-/* ── Sidebar toggle — Streamlit default icons ──────────────── */
 
 
 
@@ -37,12 +45,7 @@ h2 { font-weight: 500 !important; font-size: 32px !important; }
 h3 { font-weight: 400 !important; font-size: 22px !important; }
 h4 { font-weight: 700 !important; font-size: 18px !important; }
 
-p, li, label {
-    font-family: 'Inter', sans-serif !important;
-}
-/* Apply Inter to spans/divs but NOT to Material Symbol icon elements */
-span:not(.material-symbols-rounded):not([class*="material"]),
-div:not([data-testid="stSidebarCollapseButton"]):not([data-testid="collapsedControl"]) {
+p, li, label, div, span {
     font-family: 'Inter', sans-serif;
 }
 p, li {
