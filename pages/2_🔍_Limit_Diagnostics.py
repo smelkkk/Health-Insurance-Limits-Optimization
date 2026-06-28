@@ -133,13 +133,13 @@ for idx in selected:
         )
         m1, m2, m3, m4, m5 = st.columns(5)
         m1.metric("Claims",       f"{n}")
-        m2.metric("Binding Rate", f"{binding:.0f}%")
-        m3.metric(f"Mean Claim ({CURRENCY})", f"{df['ClaimedAmount'].mean():,.0f}")
-        m4.metric(f"Max Claim ({CURRENCY})",  f"{df['ClaimedAmount'].max():,.0f}")
+        m2.metric("Binding",      f"{binding:.0f}%")
+        m3.metric("Mean Claim",   f"{df['ClaimedAmount'].mean():,.0f}")
+        m4.metric("Max Claim",    f"{df['ClaimedAmount'].max():,.0f}")
         if binding > 70:
             m5.error("Highly binding")
         elif binding > 40:
-            m5.warning("Moderately binding")
+            m5.warning("Moderate")
         else:
-            m5.success("Not a major constraint")
+            m5.success("Low binding")
     st.markdown("<div style='margin-bottom:24px;'></div>", unsafe_allow_html=True)

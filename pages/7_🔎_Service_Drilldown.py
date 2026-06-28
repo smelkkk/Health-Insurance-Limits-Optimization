@@ -42,13 +42,13 @@ st.divider()
 
 # ── header metrics ─────────────────────────────────────────────────────────────
 c1, c2, c3, c4, c5, c6 = st.columns(6)
-c1.metric("Original Limit",     f"{orig:,} {CURRENCY}")
-c2.metric("Optimised Limit",    f"{opt:,} {CURRENCY}",
-          delta=f"{opt-orig:+,}", delta_color="normal")
-c3.metric("# Claims",           f"{int(s['n_claims'])}")
-c4.metric("Binding Rate",       f"{s['binding_rate']:.0f}%")
-c5.metric(f"Mean Claim",        f"{s['mean_claim']:,.0f} {CURRENCY}")
-c6.metric(f"Max Claim",         f"{s['max_claim']:,.0f} {CURRENCY}")
+c1.metric("Original",     f"{orig/1e3:,.0f}K")
+c2.metric("Optimised",    f"{opt/1e3:,.0f}K",
+          delta=f"{opt-orig:+,.0f}", delta_color="normal")
+c3.metric("Claims",       f"{int(s['n_claims'])}")
+c4.metric("Binding",      f"{s['binding_rate']:.0f}%")
+c5.metric("Mean Claim",   f"{s['mean_claim']:,.0f}")
+c6.metric("Max Claim",    f"{s['max_claim']:,.0f}")
 
 # ── diagnostic badge ───────────────────────────────────────────────────────────
 binding = s["binding_rate"]

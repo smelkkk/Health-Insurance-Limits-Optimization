@@ -28,11 +28,11 @@ total_opt   = summary["total_reimbursed_optimized"].sum()
 saving      = total_orig - total_opt
 
 c1, c2, c3, c4 = st.columns(4)
-c1.metric("Original Total Reimbursement",  f"{total_orig/1e6:.3f} M {CURRENCY}")
-c2.metric("Optimised Total Reimbursement", f"{total_opt/1e6:.3f} M {CURRENCY}",
-          delta=f"-{saving/1e6:.3f} M {CURRENCY}")
-c3.metric("Saving",                        f"{saving:,.0f} {CURRENCY}")
-c4.metric("Saving %",                      f"{saving/total_orig*100:.2f}%")
+c1.metric("Original Reimb.",  f"{total_orig/1e6:.2f}M")
+c2.metric("Optimised Reimb.", f"{total_opt/1e6:.2f}M",
+          delta=f"-{saving/1e3:.0f}K")
+c3.metric("Saving",           f"{saving:,.0f}")
+c4.metric("Saving %",         f"{saving/total_orig*100:.2f}%")
 
 st.divider()
 

@@ -135,14 +135,14 @@ else:
 
 col_k1, col_k2, col_k3, col_k4 = st.columns(4)
 col_k1.metric("λ", f"{lambda_val:.2e}")
-col_k2.metric("Services with limit ↑", int((df_scenario["delta"] > 0).sum()))
-col_k3.metric("Services with limit ↓", int((df_scenario["delta"] < 0).sum()))
+col_k2.metric("Limits ↑", int((df_scenario["delta"] > 0).sum()))
+col_k3.metric("Limits ↓", int((df_scenario["delta"] < 0).sum()))
 if exp_payout is not None:
-    col_k4.metric("Expected Reimbursement",
-                  f"{exp_payout/1e6:.3f} M {CURRENCY}",
-                  delta=f"saving {exp_saving/1e6:.3f} M" if exp_saving and exp_saving > 0 else "budget neutral")
+    col_k4.metric("Exp. Reimb.",
+                  f"{exp_payout/1e6:.3f}M",
+                  delta=f"{exp_saving/1e3:.0f}K saved" if exp_saving and exp_saving > 0 else "neutral")
 else:
-    col_k4.metric("Budget Constraint", "Neutral (Σδ = 0) ✓")
+    col_k4.metric("Budget", "Neutral ✓")
 
 tab_charts, tab_table = st.tabs(["📈 Charts", "📋 Table"])
 

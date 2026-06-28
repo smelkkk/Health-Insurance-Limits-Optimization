@@ -81,11 +81,11 @@ adj_m  = np.mean(result["adjusted_totals"])
 
 with col_info:
     c1, c2, c3 = st.columns(3)
-    c1.metric("Mean change in reimbursement",
-              f"{mean_d:,.0f} {CURRENCY}",
+    c1.metric("Mean Δ Reimb.",
+              f"{mean_d:,.0f}",
               delta=f"{mean_d/orig_m*100:.2f}%")
-    c2.metric("Std deviation of change", f"{std_d:,.0f} {CURRENCY}")
-    c3.metric(f"Simulations run", f"{result['n_simulations']}")
+    c2.metric("Std Deviation", f"{std_d:,.0f}")
+    c3.metric("Simulations",   f"{result['n_simulations']}")
 
 pct_favourable = sum(1 for d in result["differences"] if d <= 0) / len(result["differences"]) * 100
 st.success(
