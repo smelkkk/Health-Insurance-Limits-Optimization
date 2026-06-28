@@ -1,6 +1,14 @@
 # Academic documents and large media (stored locally in docs/)
 docs/
 
+# Raw insurance data (contains PII)
+data/Contracts.xls
+data/Requests_all_time.xls
+data/Services 01.03.24 - 01.03.25.xlsx
+
+# IDE config
+.vscode/
+
 # macOS
 .DS_Store
 

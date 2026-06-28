@@ -1,0 +1,346 @@
+/* ═══════════════════════════════════════════════════════════════
+   KinetiX Dark Theme — complete design system
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Ensure Material Symbols font is never overridden */
+.material-symbols-rounded,
+[class*="material-symbols"] {
+    font-family: 'Material Symbols Rounded' !important;
+}
+
+/* ── Sidebar toggle — Streamlit default icons ──────────────── */
+
+
+
+
+/* ── Global ────────────────────────────────────────────────── */
+.stApp {
+    background-color: rgb(0, 0, 0) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.block-container {
+    background-color: rgb(0, 0, 0) !important;
+    padding: 2rem 2.5rem !important;
+    max-width: 1160px;
+}
+
+/* ── Typography ────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif !important;
+    color: rgb(255, 255, 255) !important;
+}
+h1 { font-weight: 500 !important; font-size: 48px !important; }
+h2 { font-weight: 500 !important; font-size: 32px !important; }
+h3 { font-weight: 400 !important; font-size: 22px !important; }
+h4 { font-weight: 700 !important; font-size: 18px !important; }
+
+p, li, label {
+    font-family: 'Inter', sans-serif !important;
+}
+/* Apply Inter to spans/divs but NOT to Material Symbol icon elements */
+span:not(.material-symbols-rounded):not([class*="material"]),
+div:not([data-testid="stSidebarCollapseButton"]):not([data-testid="collapsedControl"]) {
+    font-family: 'Inter', sans-serif;
+}
+p, li {
+    color: rgb(161, 161, 161) !important;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+    background-color: rgb(13, 13, 13) !important;
+    border-right: 1px solid rgba(84, 84, 84, 0.5) !important;
+}
+section[data-testid="stSidebar"] * {
+    color: rgb(161, 161, 161) !important;
+}
+section[data-testid="stSidebar"] .stMarkdown a,
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][aria-selected="true"] span {
+    color: rgb(64, 242, 154) !important;
+}
+section[data-testid="stSidebar"] hr {
+    border-color: rgba(84, 84, 84, 0.5) !important;
+}
+
+/* ── Metric cards ──────────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: rgb(13, 13, 13) !important;
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 12px !important;
+    padding: 20px 24px !important;
+}
+[data-testid="stMetricValue"] {
+    color: rgb(64, 242, 154) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(16px, 2.2vw, 28px) !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: unset !important;
+}
+[data-testid="stMetricValue"] div {
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: unset !important;
+}
+[data-testid="stMetricLabel"] {
+    color: rgb(128, 128, 128) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: unset !important;
+}
+[data-testid="stMetricLabel"] div {
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: unset !important;
+}
+[data-testid="stMetricDelta"] {
+    color: rgb(64, 242, 154) !important;
+}
+[data-testid="stMetricDelta"] svg { display: none; }
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.stButton > button {
+    background-color: rgb(64, 242, 154) !important;
+    color: rgb(0, 0, 0) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    transition: opacity 0.2s ease;
+}
+.stButton > button:hover {
+    opacity: 0.85;
+}
+.stButton > button[kind="secondary"] {
+    background-color: transparent !important;
+    color: rgb(64, 242, 154) !important;
+    border: 1px solid rgba(64, 242, 154, 0.5) !important;
+}
+
+/* Download buttons */
+.stDownloadButton > button {
+    background-color: transparent !important;
+    color: rgb(64, 242, 154) !important;
+    border: 1px solid rgba(64, 242, 154, 0.5) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    transition: all 0.2s ease;
+}
+.stDownloadButton > button:hover {
+    background-color: rgb(64, 242, 154) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+/* ── Inputs / Selects / Sliders ────────────────────────────── */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div,
+.stMultiSelect > div > div {
+    background-color: rgb(13, 13, 13) !important;
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 8px !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus {
+    border-color: rgba(64, 242, 154, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(64, 242, 154, 0.15) !important;
+}
+.stSelectbox label, .stMultiSelect label,
+.stTextInput label, .stSlider label,
+.stNumberInput label, .stRadio label {
+    color: rgb(161, 161, 161) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* Slider track */
+.stSlider > div > div > div > div {
+    background-color: rgb(64, 242, 154) !important;
+}
+.stSlider [data-baseweb="slider"] [role="slider"] {
+    background-color: rgb(64, 242, 154) !important;
+    border-color: rgb(64, 242, 154) !important;
+}
+
+/* Radio */
+.stRadio > div {
+    background: transparent !important;
+}
+.stRadio > div label {
+    color: rgb(161, 161, 161) !important;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: rgb(13, 13, 13) !important;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 8px 8px 0 0;
+    gap: 0px;
+}
+.stTabs [data-baseweb="tab"] {
+    color: rgb(128, 128, 128) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    background: transparent !important;
+}
+.stTabs [aria-selected="true"] {
+    color: rgb(64, 242, 154) !important;
+    border-bottom: 2px solid rgb(64, 242, 154) !important;
+}
+
+/* ── Dividers ──────────────────────────────────────────────── */
+hr {
+    border-color: rgba(84, 84, 84, 0.5) !important;
+}
+
+/* ── Expanders ─────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+[data-testid="stExpander"] summary,
+.streamlit-expanderHeader {
+    background: rgb(13, 13, 13) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Inter', sans-serif !important;
+    padding: 14px 20px !important;
+}
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: rgb(255, 255, 255) !important;
+}
+[data-testid="stExpander"] > div[data-testid="stExpanderDetails"] {
+    background: rgb(13, 13, 13) !important;
+    border-top: 1px solid rgba(84, 84, 84, 0.3) !important;
+    padding: 16px 20px !important;
+}
+/* Hide the toggle arrow icon if it shows broken text */
+[data-testid="stExpander"] summary svg {
+    color: rgb(128, 128, 128) !important;
+}
+[data-testid="stExpander"] summary::marker,
+[data-testid="stExpander"] summary::-webkit-details-marker {
+    display: none !important;
+}
+
+/* ── Dataframes / tables ───────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* ── Alert boxes — flat, no inner containers ───────────────── */
+.stAlert, [data-testid="stAlert"],
+[data-testid="stAlert"] > div,
+[data-testid="stAlert"] > div > div,
+.stAlert > div,
+.stAlert > div > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+/* The outermost stAlert wrapper gets the styling */
+.stAlert, [data-testid="stAlert"] {
+    border-radius: 10px !important;
+    font-family: 'Inter', sans-serif !important;
+    padding: 16px 20px !important;
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+}
+/* Hide the icon that shows broken text */
+.stAlert [data-testid="stIconMaterial"],
+.stAlert .st-emotion-cache-1h9usn1,
+[data-testid="stAlert"] span[class*="icon"],
+[data-testid="stAlert"] [data-testid="stMarkdownContainer"] ~ div:first-child {
+    display: none !important;
+}
+/* Type-specific backgrounds */
+[data-baseweb="notification"][kind="info"],
+.stAlert:has([data-testid="stAlertContentInfo"]) {
+    background: rgba(64, 242, 154, 0.06) !important;
+    border-color: rgba(64, 242, 154, 0.2) !important;
+}
+[data-baseweb="notification"][kind="success"],
+.stAlert:has([data-testid="stAlertContentSuccess"]) {
+    background: rgba(30, 59, 12, 0.6) !important;
+    border-color: rgba(64, 242, 154, 0.3) !important;
+}
+[data-baseweb="notification"][kind="warning"],
+.stAlert:has([data-testid="stAlertContentWarning"]) {
+    background: rgba(200, 150, 0, 0.1) !important;
+    border-color: rgba(240, 190, 0, 0.25) !important;
+}
+[data-baseweb="notification"][kind="negative"],
+.stAlert:has([data-testid="stAlertContentError"]) {
+    background: rgba(200, 50, 50, 0.1) !important;
+    border-color: rgba(220, 80, 80, 0.25) !important;
+}
+/* Alert text colour */
+.stAlert p, .stAlert span, .stAlert li,
+[data-testid="stAlert"] p, [data-testid="stAlert"] span {
+    color: rgb(209, 209, 209) !important;
+}
+.stAlert strong, [data-testid="stAlert"] strong {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgb(13, 13, 13); }
+::-webkit-scrollbar-thumb { background: rgb(51, 51, 51); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(64, 242, 154); }
+
+/* ── Plotly chart containers ───────────────────────────────── */
+[data-testid="stPlotlyChart"] {
+    border: 1px solid rgba(84, 84, 84, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ── Column containers ─────────────────────────────────────── */
+[data-testid="stColumn"] {
+    padding: 0 4px;
+}
+
+/* ── Code blocks ───────────────────────────────────────────── */
+code, pre, .stCode {
+    background: rgb(13, 13, 13) !important;
+    color: rgb(64, 242, 154) !important;
+    border: 1px solid rgba(84, 84, 84, 0.5) !important;
+    border-radius: 8px !important;
+}
+
+/* ── Captions ──────────────────────────────────────────────── */
+.stCaption, [data-testid="stCaption"] {
+    color: rgb(128, 128, 128) !important;
+    font-size: 12px !important;
+}
+
+/* ── Multiselect tags ──────────────────────────────────────── */
+[data-baseweb="tag"] {
+    background: rgb(30, 59, 12) !important;
+    color: rgb(64, 242, 154) !important;
+    border-radius: 6px !important;
+}
