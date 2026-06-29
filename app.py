@@ -24,7 +24,7 @@ ASSETS = Path(__file__).parent / "assets"
 
 st.set_page_config(
     page_title="KinetiX · Insurance Limit Optimiser",
-    page_icon=str(ASSETS / "favicon.png"),
+    page_icon=str(ASSETS / "Kinetix_symbol_green.ico"),
     layout="wide",
     initial_sidebar_state="expanded",
 )

@@ -7,7 +7,7 @@ from src.visualizations import monte_carlo_distribution, monte_carlo_scatter
 
 from pathlib import Path as _Path
 _ASSETS = _Path(__file__).parent.parent / "assets"
-st.set_page_config(page_title="KinetiX · Validation", page_icon=str(_ASSETS / "favicon.png"), layout="wide")
+st.set_page_config(page_title="KinetiX · Validation", page_icon=str(_ASSETS / "Kinetix_symbol_green.ico"), layout="wide")
 
 # inject CSS
 _css = _ASSETS / "style.css"
