@@ -250,3 +250,11 @@ pip install -r requirements.txt
 - Once issued, activate it with: `grbgetkey <your-key>`
 
 The data processing (`data_process.ipynb`), comparison (`comparison.ipynb`), and Monte Carlo (`monte_carlo_simulation.ipynb`) notebooks do **not** require Gurobi — they can run on any machine with the pip/conda dependencies above.
+
+---
+
+## License
+
+Copyright (c) 2026 Simon Melkonyan. **All rights reserved.**
+
+The source is public for viewing and evaluation only. Copying, modifying, redistributing or reusing it in other projects requires written permission. See [LICENSE](LICENSE).
